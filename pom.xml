@@ -25,7 +25,9 @@
         <gherkin.version>26.2.0</gherkin.version>
     </properties>
 
-    <dependencies>
+
+
+       <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-core</artifactId>
@@ -78,6 +80,20 @@
             <version>5.10.1</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                 </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
 
 </project>
 
