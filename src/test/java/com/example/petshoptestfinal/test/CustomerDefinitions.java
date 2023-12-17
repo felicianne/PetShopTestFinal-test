@@ -1,6 +1,5 @@
-package com.example.petshoptestfinal.test.customer;
+package com.example.petshoptestfinal.test;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,8 +28,8 @@ public class CustomerDefinitions {
         customer.setEmail(RandomStringUtils.randomAlphanumeric(11));
     }
 
-    @Given("customer without document")
-    public void customerWithoutDocument() {
+    @Given("customer without email")
+    public void customerWithoutEmail() {
         customer = new Customer();
         customer.setName(RandomStringUtils.randomAlphabetic(20));
         customer.setEmail(null);
@@ -57,9 +56,9 @@ public class CustomerDefinitions {
         Assertions.assertEquals(customer.getName(), name);
     }
 
-    @Then("notify document must be not null")
+    @Then("notify email must be not null")
     public void notifyDocumentMustBeNotNull() {
-        String failReason = response.jsonPath().get("errors[0].document");
+        String failReason = response.jsonPath().get("errors[0].email");
         Assertions.assertEquals("must not be null", failReason);
     }
 

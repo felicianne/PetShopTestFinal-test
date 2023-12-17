@@ -1,4 +1,4 @@
-package com.example.petshoptestfinal.test.customer;
+package com.example.petshoptestfinal.test;
 
 public class Customer {
     private Integer id;
